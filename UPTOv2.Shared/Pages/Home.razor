@@ -1,0 +1,14 @@
+﻿@page "/"
+@using UPTOv2.Shared.Services
+@inject IFormFactor FormFactor
+
+<div class="container-fluid justify-content-center align-items-center">
+    <div class="w-100 text-center">
+        <h3>DASHBOARD</h3>
+    </div>
+    
+</div>
+@code {
+    private string factor => FormFactor.GetFormFactor();
+    private string platform => FormFactor.GetPlatform();
+}

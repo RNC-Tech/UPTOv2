@@ -1,0 +1,34 @@
+﻿<div class="d-flex justify-content-center align-items-center w-100 py-3">
+    <div class="tab-container">
+        <input type="radio" name="tab" id="tab1" class="tab tab--1" />
+        <label @onclick="@NavigateToHome" class="tab_label" for="tab1">Home</label>
+
+        <input type="radio" name="tab" id="tab2" class="tab tab--2" />
+        <label @onclick="@NavigateToExtras" class="tab_label" for="tab2">Extras</label>
+
+        <input type="radio" name="tab" id="tab3" class="tab tab--3" />
+        <label @onclick="@NavigateToAbout" class="tab_label" for="tab3">About</label>
+        <div class="indicator"></div>
+
+    </div>
+</div>
+
+@code {
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    public void NavigateToHome()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+    public void NavigateToExtras()
+    {
+        NavigationManager.NavigateTo("/extras");
+    }
+
+    public void NavigateToAbout()
+    {
+        NavigationManager.NavigateTo("/about");
+    }
+}
