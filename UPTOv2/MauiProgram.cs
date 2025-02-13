@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using UPTOv2.Shared.Services;
 using UPTOv2.Services;
+using Microsoft.FluentUI.AspNetCore.Components;
 
 namespace UPTOv2;
 
@@ -22,6 +23,7 @@ public static class MauiProgram
         builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG
+        builder.Services.AddFluentUIComponents();
         builder.Services.AddBlazorWebViewDeveloperTools();
         builder.Logging.AddDebug();
 #endif

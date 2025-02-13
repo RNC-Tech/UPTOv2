@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\UPTOv2.Web.Client\UPTOv2.Web.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.2" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.4" />
   </ItemGroup>
 
 </Project>

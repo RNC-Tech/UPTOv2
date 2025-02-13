@@ -1,7 +1,7 @@
 using UPTOv2.Web.Components;
 using UPTOv2.Shared.Services;
 using UPTOv2.Web.Services;
-using MudBlazor.Services;
+using Microsoft.FluentUI.AspNetCore.Components;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,9 +9,9 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
+builder.Services.AddFluentUIComponents();
 // Add device-specific services used by the UPTOv2.Shared project
 builder.Services.AddSingleton<IFormFactor, FormFactor>();
-builder.Services.AddMudServices();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
